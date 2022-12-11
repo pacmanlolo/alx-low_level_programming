@@ -1,9 +1,9 @@
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h>/* more headers goes there */
+#include <stdio.h>
 
 /**
- * main - position of n
+ * main - The last digit
  *
  * Return: 0
  */
@@ -15,7 +15,7 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	x = n % 10;
-	printf("Last digit of %d is %d", n, x);
+	printf("Last digit of %d id %d, n, x);
 	if (x > 5)
 	{
 		printf("and is greater than 5");

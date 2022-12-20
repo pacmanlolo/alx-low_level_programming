@@ -2,22 +2,27 @@
 
 /**
  * puts_half - prints second half of a string
+ *
  * @str: char array string type
- * Description: If odd number of chars, print (length - 1) / 2
+ *
+ * Return: Nothing
  */
 
 void puts_half(char *str)
 {
-	int i;
+	int l, n;
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (l = 0; str[l] != '\0'; ++l)
 		;
 
-	i++;
-	for (i /= 2; str[i] != '\0'; i++)
+	if (l % 2 == 0)
 	{
-		_putchar(str[i]);
-
+		for (n = l / 2; str[n] != '\0'; ++n)
+			_putchar(str[n]);
+	}	else
+	{
+		for (n = ((l - 1) / 2) + 1; str[n] != '\0'; ++n)
+			_putchar(str[i]);
 	}
 	_putchar('\n');
 }

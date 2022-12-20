@@ -1,24 +1,19 @@
 #include "main.h"
 
 /**
- * puts2: prints one char out of 2 of a string.
+ * puts2 - prints one char out of 2 of a string.
  * @str: input string.
- * Return: no return.
+ * Return: Nothing.
  */
 
 void puts2(char *str)
 {
-	int count = 0;
+	int i;
 
-	while (count >= 0)
+	for (i = 0; str[i] != '\0'; ++i)
 	{
-		if (str[count] == '\0')
-		{
-			_putchar('\n');
-			break;
-		}
-		if (count % 2 == 0)
-			_putchar(str[count]);
-		count++;
+		if (i % 2 == 0)
+			_putchar(str[i]);
 	}
+	_putchar('\n');
 }

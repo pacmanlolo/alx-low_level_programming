@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * puts_half - prints second half of a string
+ * puts_half - prints half of a string
  *
  * @str: char array string type
  *
@@ -22,7 +22,7 @@ void puts_half(char *str)
 	}	else
 	{
 		for (n = ((l - 1) / 2) + 1; str[n] != '\0'; ++n)
-			_putchar(str[i]);
+			_putchar(str[n]);
 	}
 	_putchar('\n');
 }

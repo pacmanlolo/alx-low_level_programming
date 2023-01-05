@@ -9,21 +9,21 @@ int _sqrt_recursion(int n)
 {
 	if (n < 0)
 		return (-1);
-	else
-		return (squareroot(n, (n + 1) / 2));
+	return (sqrt_function(n, 0));
 }
 /**
- * squareroot - checks if perfect square
+ * sqrt_function - recurses to find the natural
+ * square root of a number
  * @n: input
- * @i: counter
- * Return: if square root
+ * @i: iterator
+ * Return: the resulting square root
  */
-int squareroot(int n, int i)
+int sqrt_function(int n, int i)
 {
-	if (i < 1)
+	if (i * i > n)
 		return (-1);
 	else if (i * i == n)
 		return (i);
 	else
-		return (squareroot(n, i - 1));
+		return (sqrt(n, i + 1));
 }

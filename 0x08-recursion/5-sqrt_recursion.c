@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * _sqrt_recursion - no loop, 1. 2nd function - checks for perfect square
- * @n: input
- * Return: Always 0 (Success)
+ * _sqrt_recursion - a function that returns the square root of a number
+ * @n: the number to operated on
+ * Return: returns the aquare root of n as an int
  */
 int _sqrt_recursion(int n)
 {
@@ -22,8 +22,7 @@ int sqrt_function(int n, int i)
 {
 	if (i * i > n)
 		return (-1);
-	else if (i * i == n)
+	if (i * i == n)
 		return (i);
-	else
-		return (sqrt(n, i + 1));
+	return (sqrt_function(n, i + 1));
 }

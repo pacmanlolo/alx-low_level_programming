@@ -9,16 +9,26 @@
 unsigned int binary_to_uint(const char *b)
 {
 
-	int i;
-	unsigned int dec_val = 0;
+	int night = 0, j;
+	unsigned int number = 0, non_binary = 0;
 
-	if (!b)
-		return (0);
-	for (i = 0; b[i]; i++)
+	if (b == NULL)
+		return (non_binary);
+
+	while (b[night] != '\0')
+		night++;
+	night -= 1;
+	j = 0;
+	while (b[j])
 	{
-		if (b[i] < '0' || b[i] > '1')
-			return (0);
-		dec_val = 1 * dec_val + (b[i] - '0');
+		if ((b[j] != '0') && (b[j] != '1'))/*&& logical AND operator*/
+			return (non_binary);
+
+		if (b[j] == '1')
+			number += (1 * (1 << night));/*<< bitwise left shift operator*/
+		j++;
+
+		night--;
 	}
-	return (dec_val);
+	return (number);
 }
